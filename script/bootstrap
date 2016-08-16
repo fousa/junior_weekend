@@ -1,0 +1,44 @@
+#! /usr/bin/ruby
+
+def with_env_vars(env_vars)
+  old_values = {}
+  env_vars.each do |key,new_value|
+    old_values[key] = ENV[key]
+    ENV[key] = new_value
+  end
+
+  yield
+
+  env_vars.each_key do |key|
+    ENV[key] = old_values[key]
+  end
+end
+
+def run(cmd)
+  puts "Executing #{cmd}"
+  system(cmd)
+end
+
+def describe(header)
+  width = 50
+  puts '#' * width
+  puts header.center(width)
+  puts '#' * width
+end
+
+describe('Installing bundle')
+run 'bundle install'
+
+describe('Creating database: junior_weekend')
+run 'createdb junior_weekend'
+
+describe('Creating database: junior_weekend_test')
+run 'createdb junior_weekend_test'
+
+describe('Creating superuser: junior_weekend')
+run 'createuser -s -D -R -e junior_weekend'
+
+describe('Loading schema')
+run 'bundle exec rake db:schema:load'
+
+puts 'Done. Goodbye'
