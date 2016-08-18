@@ -1,0 +1,53 @@
+<div class="container">
+
+  <!-- Title -->
+  <p><small>Het</small></p>
+  <h1>Junioren Weekend 2016</h1>
+  <p><small>komt er aan binnen</small></p>
+
+  <!-- Countdown timer -->
+  <div class="row countdown">
+    <div class="three columns"><h1 class="days">0</h1></div>
+    <div class="three columns"><h1 class="hours">0</h1></div>
+    <div class="three columns"><h1 class="minutes">0</h1></div>
+    <div class="three columns"><h1 class="seconds">0</h1></div>
+  </div>
+  <div class="row">
+    <div class="three columns"><h1>dagen</h1></div>
+    <div class="three columns"><h1>uren</h1></div>
+    <div class="three columns"><h1>minuten</h1></div>
+    <div class="three columns"><h1>seconden</h1></div>
+  </div>
+
+  <!-- Glider description -->
+  <div class="row">
+    <div class="six columns"><%= image_tag 'Arcus.jpg', style: 'width: 100%' %></div>
+    <div class="six columns">Zoals de voorgaande edities zullen jullie tijdens de dag met moderne tweezitters kunnen meevliegen waaronder Duo Discus, Arcus, DG1001, dinoma, alsook de FOX voor acro luchtdopen.</div>
+  </div>
+
+  <!-- Dinner description -->
+  <div class="row">
+    <div class="six columns">'s Avonds sluiten we de dag af met traditionele pizza à volonté waarvoor je je op deze website voor moet inschrijven. Daarna zetten we de nacht in met een coverband waarna de DJ overneemt om het feest verder te zetten tot in de vroege uurtjes! Voor de lege magen voorzien we 's morgens een ontbijt.</div>
+    <div class="six columns"><%= image_tag 'Arcus.jpg', style: 'width: 100%' %></div>
+  </div>
+
+  <div class="row">
+    <div class="six columns">
+      <%= link_to 'https://www.google.com/maps/place/EBBT' do %>
+        <%= image_tag 'http://maps.googleapis.com/maps/api/staticmap?center=EBBT&zoom=12&scale=2&size=640x640&maptype=roadmap&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xff2600%7Clabel:1%7CEBBT', style: 'width: 100%' %>
+      <% end %>
+    </div>
+
+    <div class="six columns">
+      <ul>
+        <li><strong>Waar?</strong>EBBT, gps adres: Essensesteenweg 73, Brasschaat, België</li>
+        <li><strong>Wanneer?</strong>24 September 2016</li>
+        <li><strong>Wat?</strong>De beste manier om het zweefvliegseizoen af te sluiten!</li>
+      </ul>
+    </div>
+  </div>
+
+  <p>
+    Ga zeker eens langs onze <%= link_to 'Facebook', 'https://www.facebook.com/events/1785661055002909/' %> pagina.
+  </p>
+</div>
