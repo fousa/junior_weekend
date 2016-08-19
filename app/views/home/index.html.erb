@@ -19,6 +19,11 @@
     <div class="three columns"><h1>seconden</h1></div>
   </div>
 
+  <!-- Registration form -->
+  <div class="row registration">
+    <%= render partial: 'registrations/form', locals: { registration: @registration } %>
+  </div>
+
   <!-- Glider description -->
   <div class="row">
     <div class="six columns"><%= image_tag 'Arcus.jpg', style: 'width: 100%' %></div>
