@@ -1,4 +1,14 @@
 class RegistrationsController < ApplicationController
+  def index
+    @registrations = Registration.all
+
+    respond_to do |format|
+      format.xlsx {
+        response.headers['Content-Disposition'] = 'attachment; filename="Inschrijvingen.xlsx"'
+      }
+    end
+  end
+
   def create
     @registration = Registration.new(registration_params)
 

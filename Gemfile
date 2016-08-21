@@ -25,9 +25,9 @@ gem 'jbuilder', '~> 2.5'
 # [pg](https://bitbucket.org/ged/ruby-pg)
 gem "pg", "~> 0.18.4"
 
-# Adds a to_xls method to all enumerations, which can be used to generate exce
-# [to_xls](https://github.com/splendeo/to_xls)
-gem "to_xls", "~> 1.5.3"
+# Axlsx_Rails provides an Axlsx renderer so you can move all your spreadsheet
+# [axlsx_rails](https://github.com/straydogstudio/axlsx_rails)
+gem "axlsx_rails", "~> 0.5.0"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

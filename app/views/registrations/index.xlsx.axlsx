@@ -1,0 +1,29 @@
+workbook = xlsx_package.workbook
+workbook.styles do |style|
+  header_style = style.add_style bg_color: "cccccc", alignment: { horizontal: :center }
+
+  workbook.add_worksheet(name: 'Inschrijvingen 2016') do |sheet|
+    sheet.add_row [
+      'Naam',
+      'Email',
+      'Club',
+      'Overdag',
+      'Avond',
+      'Nacht',
+      'Eten (personen)',
+      'Acro'
+    ], style: [header_style, header_style, header_style, header_style, header_style, header_style, header_style, header_style]
+    @registrations.each do |registration|
+      sheet.add_row [
+        registration.name,
+        registration.email,
+        registration.club,
+        registration.presence_day.humanize,
+        registration.presence_evening.humanize,
+        registration.presence_night.humanize,
+        registration.food,
+        registration.acro.humanize
+      ]
+    end
+  end
+end
