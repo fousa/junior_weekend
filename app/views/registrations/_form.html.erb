@@ -1,21 +1,15 @@
 <div class="row">
   <div class="twelve columns">
     <h4>Vul onderstaande velden in om je in te schrijven!</h4>
+    <% if registration.errors.any? %>
+      <div class="error_explanation">
+        <h4>Niet alle velden zijn juist ingevuld, pas deze aan en probeer opnieuw.</h2>
+      </div>
+      <% end %>
   </div>
 </div>
 
 <%= form_for(registration, remote: true) do |f| %>
-  <% if registration.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(registration.errors.count, "error") %> prohibited this registration from being saved:</h2>
-
-      <ul>
-      <% registration.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
 
 
   <div class="row">
