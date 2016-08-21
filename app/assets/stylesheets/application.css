@@ -13,3 +13,106 @@
  *= require_tree .
  *= require_self
  */
+
+ .title {
+   height: 300px;
+   position: relative
+ }
+ .row .title h1 {
+   text-align: center;
+   text-transform: uppercase;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   margin-right: -50%;
+   transform: translate(-50%, -50%);
+ }
+
+ .section {
+   margin: 5em 0;
+ }
+
+ .facebook {
+   background-color: #3b5998;
+   color: white;
+ }
+
+ .join {
+   background-color: #5A963C;
+   color: white;
+ }
+
+ .join .columns p,
+ .facebook .columns p {
+   text-align: center;
+   margin-top: 1.2em;
+   font-weight: lighter;
+   text-transform: uppercase;
+   padding-left: 1em;
+   padding-right: 1em;
+ }
+
+ .join .columns a,
+ .facebook .columns a {
+   color: white;
+   text-decoration: none;
+   border-bottom: 3px solid white;
+ }
+
+ .registration h4 {
+   text-align: center;
+ }
+
+.row p,
+.row ul li {
+  font-size: 1.3em;
+  line-height: 2em;
+  text-align: justify;
+}
+
+li {
+  list-style-type: none;
+}
+
+li strong {
+  display: block;
+}
+
+input[type='text'] {
+  width: 100%;
+}
+
+input[type='submit']:hover {
+  color: white;
+  background-color: #76BB54;
+  border-color: #76BB54;
+}
+
+input[type='submit'] {
+  font-size: 2em;
+  line-height: 2em;
+  height: auto;
+  background-color: #5A963C;
+  border-color: #5A963C;
+  color: white;
+  font-weight: lighter;
+}
+
+.actions {
+  text-align: center;
+}
+
+input, label {
+  font-size: 1.3em;
+}
+
+.checkbox label {
+  display: inline;
+  font-weight: normal;
+  margin-left: 0.5em;
+}
+
+.countdown {
+  text-align: center;
+  text-transform: uppercase;
+}

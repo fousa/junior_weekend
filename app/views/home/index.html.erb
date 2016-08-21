@@ -1,45 +1,63 @@
 <div class="container">
-
-  <!-- Title -->
-  <p><small>Het</small></p>
-  <h1>Junioren Weekend 2016</h1>
-  <p><small>komt er aan binnen</small></p>
-
-  <!-- Countdown timer -->
-  <div class="row countdown">
-    <div class="three columns"><h1 class="days">0</h1></div>
-    <div class="three columns"><h1 class="hours">0</h1></div>
-    <div class="three columns"><h1 class="minutes">0</h1></div>
-    <div class="three columns"><h1 class="seconds">0</h1></div>
-  </div>
-  <div class="row">
-    <div class="three columns"><h1>dagen</h1></div>
-    <div class="three columns"><h1>uren</h1></div>
-    <div class="three columns"><h1>minuten</h1></div>
-    <div class="three columns"><h1>seconden</h1></div>
+  <div class="row section">
+    <div class="six columns title">
+      <h1>Junioren Weekend 2016</h1>
+    </div>
+    <div class="six columns"><%= image_tag 'Arcus.jpg', class: 'u-max-full-width' %></div>
   </div>
 
-  <!-- Registration form -->
-  <div class="row registration">
-    <%= render partial: 'registrations/form', locals: { registration: @registration } %>
+
+  <div class="row countdown section">
+    <div class="three columns">
+      <h1 class="days">0</h1>
+      <h4>dagen</h4>
+    </div>
+    <div class="three columns">
+      <h1 class="hours">0</h1>
+      <h4>uren</h4>
+    </div>
+    <div class="three columns">
+      <h1 class="minutes">0</h1>
+      <h4>minuten</h4>
+    </div>
+    <div class="three columns">
+      <h1 class="seconds">0</h1>
+      <h4>seconden</h4>
+    </div>
   </div>
 
   <!-- Glider description -->
-  <div class="row">
-    <div class="six columns"><%= image_tag 'Arcus.jpg', style: 'width: 100%' %></div>
-    <div class="six columns">Zoals de voorgaande edities zullen jullie tijdens de dag met moderne tweezitters kunnen meevliegen waaronder Duo Discus, Arcus, DG1001, dinoma, alsook de FOX voor acro luchtdopen.</div>
+  <div class="row section">
+    <div class="six columns"><%= image_tag 'Arcus.jpg', class: 'u-max-full-width' %></div>
+    <div class="six columns">
+      <p>Zoals de voorgaande edities zal er overdag met moderne tweezitters kunnen meegevlogen worden.</p>
+      <p>Dit zijn enkele van de toestellen waar mee gevlogen zal worden:</p>
+      <p><em>Duo Discus</em>, <em>Arcus</em>, <em>DG 1001</em>, <em>Dimona</em>, <em>Fox (voor de acro vluchten)</em></p>
+    </div>
   </div>
 
   <!-- Dinner description -->
-  <div class="row">
-    <div class="six columns">'s Avonds sluiten we de dag af met traditionele pizza à volonté waarvoor je je op deze website voor moet inschrijven. Daarna zetten we de nacht in met een coverband waarna de DJ overneemt om het feest verder te zetten tot in de vroege uurtjes! Voor de lege magen voorzien we 's morgens een ontbijt.</div>
-    <div class="six columns"><%= image_tag 'Arcus.jpg', style: 'width: 100%' %></div>
+  <div class="row section">
+    <div class="six columns">
+      <div>
+      <p>'s Avonds sluiten we de dag af met een <strong>traditionele pizza</strong> à volonté waarvoor je je op deze website voor moet inschrijven.</p>
+      <p>Daarna zetten we de nacht in met een <strong>coverband</strong> waarna de DJ overneemt om het feest verder te zetten tot in de vroege uurtjes! Voor de lege magen voorzien we 's morgens een <strong>ontbijt</strong>.</p>
+
+      </div>
+    </div>
+    <div class="six columns"><%= image_tag 'Arcus.jpg', class: 'u-max-full-width' %></div>
   </div>
 
-  <div class="row">
+  <div class="row section facebook">
+    <div class="twelve columns">
+      <p>Ga zeker eens kijken op onze <%= link_to 'Facebook', 'https://www.facebook.com/events/1785661055002909/' %> pagina</p>
+    </div>
+  </div>
+
+  <div class="row section">
     <div class="six columns">
-      <%= link_to 'https://www.google.com/maps/place/EBBT' do %>
-        <%= image_tag 'EBBT.png', style: 'width: 100%' %>
+      <%= link_to 'https://www.google.com/maps/place/EBBT', class: 'u-max-full-width' do %>
+        <%= image_tag 'EBBT.png', class: 'u-max-full-width' %>
       <% end %>
     </div>
 
@@ -52,7 +70,14 @@
     </div>
   </div>
 
-  <p>
-    Ga zeker eens langs onze <%= link_to 'Facebook', 'https://www.facebook.com/events/1785661055002909/' %> pagina.
-  </p>
+  <div class="row section join">
+    <div class="twelve columns">
+      <p>Wil je er graag bij zijn? Vul dan onderstaand formulier in.</p>
+    </div>
+  </div>
+
+  <!-- Registration form -->
+  <div class="registration">
+    <%= render partial: 'registrations/form', locals: { registration: @registration } %>
+  </div>
 </div>

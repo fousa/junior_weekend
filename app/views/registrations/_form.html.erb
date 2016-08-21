@@ -1,3 +1,9 @@
+<div class="row">
+  <div class="twelve columns">
+    <h4>Vul onderstaande velden in om je in te schrijven!</h4>
+  </div>
+</div>
+
 <%= form_for(registration, remote: true) do |f| %>
   <% if registration.errors.any? %>
     <div id="error_explanation">
@@ -11,47 +17,85 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+
+  <div class="row">
+    <div class="six columns">
+      <div class="field">
+        <%= f.label :name, 'Naam' %>
+        <%= f.text_field :name %>
+      </div>
+    </div>
+    <div class="six columns">
+      <div class="field">
+        <%= f.label :email, 'Emailadres' %>
+        <%= f.text_field :email %>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="six columns">
+      <div class="field">
+        <%= f.label :club, 'Jouw vliegclub' %>
+        <%= f.text_field :club %>
+      </div>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :email %>
-    <%= f.text_field :email %>
+  <hr>
+
+  <div class="row">
+    <div class="twelve columns">
+      <p><strong>Wanneer ga je aanwezig zijn?</strong></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="four columns checkbox">
+      <div class="field">
+        <%= f.check_box :presence_day %>
+        <%= f.label :presence_day, 'Overdag' %>
+      </div>
+    </div>
+    <div class="four columns checkbox">
+      <div class="field">
+        <%= f.check_box :presence_evening %>
+        <%= f.label :presence_evening, '\'s Avonds' %>
+      </div>
+    </div>
+    <div class="four columns checkbox">
+      <div class="field">
+        <%= f.check_box :presence_night %>
+        <%= f.label :presence_night, '\'s Nachts' %>
+      </div>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :club %>
-    <%= f.text_field :club %>
+  <hr>
+
+  <div class="row">
+    <div class="six columns checkbox">
+      <p><strong>Wil je graag een <em>Acro</em> vlucht doen?</strong></p>
+      <div class="field">
+        <%= f.check_box :acro %>
+        <%= f.label :acro, 'JA!' %>
+      </div>
+    </div>
+    <div class="six columns checkbox">
+      <p><strong>Met hoeveel personen ga je blijven eten?</strong></p>
+      </p>
+        <div class="field">
+          <%= f.number_field :food %>
+          <%= f.label :food, 'Personen' %>
+        </div>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :acro %>
-    <%= f.check_box :acro %>
-  </div>
+  <hr>
 
-  <div class="field">
-    <%= f.label :food %>
-    <%= f.number_field :food %>
-  </div>
-
-  <div class="field">
-    <%= f.label :presence_day %>
-    <%= f.check_box :presence_day %>
-  </div>
-
-  <div class="field">
-    <%= f.label :presence_evening %>
-    <%= f.check_box :presence_evening %>
-  </div>
-
-  <div class="field">
-    <%= f.label :presence_night %>
-    <%= f.check_box :presence_night %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
+  <div class="row">
+    <div class="twelve columns">
+      <div class="actions">
+        <%= f.submit 'Inschrijven!' %>
+      </div>
+    </div>
   </div>
 <% end %>
