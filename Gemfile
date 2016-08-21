@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# Autoload dotenv in Rails.
+# [dotenv-rails](https://github.com/bkeepers/dotenv)
+gem "dotenv-rails", '~> 2.1.1', groups: [:development, :test]
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
