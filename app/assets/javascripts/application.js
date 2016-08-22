@@ -17,7 +17,7 @@
 
 $(function() {
   $('.countdown').downCount({
-      date: '09/24/2016 09:00:00',
+      date: '09/24/2016 10:00:00',
       offset: -2
   });
 });
