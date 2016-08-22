@@ -117,6 +117,10 @@ input, label {
   text-transform: uppercase;
 }
 
+.success_explanation h4 {
+  color: #5A963C;
+}
+
 .error_explanation h4,
 .field_with_errors label {
   color: #964B3C;
