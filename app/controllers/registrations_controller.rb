@@ -17,7 +17,10 @@ class RegistrationsController < ApplicationController
     respond_to do |format|
       if @registration.save
         format.html { redirect_to root_url, notice: 'Registration was successfully created.' }
-        format.js { @registration = Registration.new }
+        format.js {
+          @success = true
+          @registration = Registration.new food: 0
+        }
       else
         format.html { render :new }
         format.js
