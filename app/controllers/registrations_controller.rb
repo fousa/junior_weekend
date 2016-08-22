@@ -16,6 +16,7 @@ class RegistrationsController < ApplicationController
 
     respond_to do |format|
       if @registration.save
+        RegistrationMailer.welcome(@registration).deliver_later
         format.html { redirect_to root_url, notice: 'Registration was successfully created.' }
         format.js {
           @success = true
